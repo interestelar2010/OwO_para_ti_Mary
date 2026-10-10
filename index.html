@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8f4">
+  <meta name="description" content="Un pequeño regalo para Mary, con cariño de Jeremy.">
+  <title>Un regalo para Mary :D</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><span>✦</span><span>♡</span><span>✧</span><span>♡</span><span>✦</span><span>✧</span></div>
+  <main class="shell">
+    <section class="screen active" id="welcome" aria-labelledby="welcome-title">
+      <div class="welcome-card">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> Un detallito para Mary</div>
+        <div class="hero-heart" aria-hidden="true">♡</div>
+        <h1 id="welcome-title">Tengo unas preguntas<br>para ti, <em>amikita</em></h1>
+        <p class="lead">Responde con sinceridad... aunque no te prometo que todos los botones cooperen. XD</p>
+        <button class="button button-primary" id="start-button">Comenzar <span aria-hidden="true">→</span></button>
+        <p class="tiny-note">Sin presión. Es solo un interrogatorio amistoso UWU</p>
+      </div>
+    </section>
+
+    <section class="screen" id="quiz" aria-labelledby="question-text" aria-live="polite">
+      <div class="quiz-card">
+        <div class="quiz-top"><span class="eyebrow">Ronda de preguntas</span><span class="counter" id="counter">1 / 8</span></div>
+        <div class="progress-track" role="progressbar" aria-label="Progreso del juego" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0"><div class="progress-fill" id="progress-fill"></div></div>
+        <div class="question-mark" aria-hidden="true">?</div>
+        <h2 id="question-text"></h2>
+        <p class="reaction" id="reaction" aria-live="polite"></p>
+        <div class="answer-area" id="answer-area">
+          <button class="button answer-button" id="yes-button">Sí</button>
+          <button class="button answer-button" id="no-button">No</button>
+        </div>
+        <p class="tiny-note">Elige con sabiduría, amikita OwO</p>
+      </div>
+    </section>
+
+    <section class="screen" id="interlude" aria-labelledby="interlude-title">
+      <div class="interlude-card">
+        <div class="envelope" aria-hidden="true"><span>♡</span></div>
+        <p class="eyebrow">La ronda terminó</p>
+        <h2 id="interlude-title">¡Interrogatorio completado!</h2>
+        <p class="lead">Ahora sí, amikita... tengo algo más que decirte.</p>
+        <button class="button button-primary" id="surprise-button">Ver sorpresa <span aria-hidden="true">✦</span></button>
+      </div>
+    </section>
+
+    <section class="screen letter-screen" id="letter" aria-labelledby="letter-title" tabindex="-1">
+      <article class="letter-card">
+        <header class="letter-header"><span class="eyebrow">Hecho con cariño, para ti</span><div class="letter-flower" aria-hidden="true">✿</div><h2 id="letter-title">Una carta para<br><em>mi amikita Mary</em></h2><p class="letter-intro">Querida amikita Mary:<br><br>Esta vez será diferente, pues últimamente he sacado mi personalidad ‘premium’ contigo, o sea, que me siento mucho más cómodo contigo. Además, en esta ocasión decidí no usar un lenguaje tan formal, porque esta vez es diferente.<br><br>Ya no falta mucho para cumplir nuestro primer año siendo amigos, y yo quería decirte que eres la amistad que más valoro. Tanto es así que, la última vez que te hice enojar, me puse muy mal, hasta que me disculpaste. Jsjsjsjsjs.<br><br>Eres una de esas amistades que no quiero perder nunca y que admiro mucho. Sé que tu vida no ha sido fácil y lamento mucho eso. Pero quiero que sepas que, en estos últimos días, me has ayudado mucho, ya sea haciéndome reír, jugando conmigo, dándome tus sabios consejos e incluso repitiéndome las actividades que hay que hacer porque me distraigo. XD.<br><br>La verdad es que tener una amistad así vale mucho más que el oro, y por eso eres muy importante para mí.<br><br>Además, hace tiempo habíamos hablado de las razones que hay para admirarte y, pues, en ese momento no sabías qué decir. Así que yo mismo decidí recordarte todas las maravillosas cualidades que tienes y que son dignas de admirar. Tal vez pienses que son pocas, pero no es verdad.<br><br>Así que, amikita, yo diría que te admiro por:</p></header>
+        <div class="qualities-heading"><span></span><h3>Todas esas cosas que te hacen admirable</h3><span></span></div>
+        <ol class="qualities" id="qualities-list" aria-label="Cualidades que Jeremy admira de Mary"></ol>
+        <footer class="letter-signoff"><p>Gracias por todo, amikita.</p><p>Con algo de vergüenza, pero con mucho cariño.</p><p class="signature-label">Tu amigo,</p><p class="signature">Jeremy :D</p></footer>
+        <nav class="final-controls" aria-label="Controles del regalo"><button class="button button-secondary" id="replay-button">↻ Repetir el juego</button><button class="button button-primary" id="home-button">⌂ Volver al inicio</button></nav>
+      </article>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
